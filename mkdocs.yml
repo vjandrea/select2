@@ -10,6 +10,7 @@ theme:
   name: material
   custom_dir: docs/overrides
   logo: images/logo.png
+  favicon: images/favicon.ico
   palette:
     - media: "(prefers-color-scheme)"
       primary: blue-grey
@@ -46,6 +47,11 @@ plugins:
       enabled: !ENV [CI, false]
       repository: select2/select2
       branch: develop
+      exclude_committers:
+        - dependabot[bot]
+        - pre-commit-ci[bot]
+        - web-flow
+        - Copilot
   - redirects:
       redirect_maps:
         'troubleshooting/README.md': 'troubleshooting/getting-help.md'
